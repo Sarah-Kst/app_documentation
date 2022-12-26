@@ -2,10 +2,10 @@
 
 In this section examples of GPC study are presented.
 
-## SCOT
+## Scleroderma
 
-Example with SCOT data.
+Example with scleroderma data.
 
-## Disease X
+## Breast cancer
 
-Example with disease X.
+Example with breast cancer.

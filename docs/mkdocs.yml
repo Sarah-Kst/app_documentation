@@ -5,10 +5,10 @@ nav:
         - demos.md
     - Patient: 
         - patient.md
-        - create_user.md
+        - create_user_pt.md
     - Expert: 
         - expert.md
-        - create_user.md
+        - create_user_exp.md
         
 markdown_extensions:
     - toc:
