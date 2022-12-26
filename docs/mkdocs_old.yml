@@ -1,0 +1,21 @@
+site_name: Analysis BENEFIT
+nav:
+    - Home: index.md
+    - Getting Started: 
+        - demos.md
+    - Patient: 
+        - patient.md
+        - create_user_pt.md
+    - Expert: 
+        - expert.md
+        - create_user_exp.md
+        
+markdown_extensions:
+    - toc:
+        permalink: True    
+    - markdown_include.include:
+        base_path: docs    
+theme: readthedocs
+
+plugins: 
+    - search
