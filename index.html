@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>BENEFIT documentation</title>
+    <title>Analysis BENEFIT</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -31,7 +31,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> BENEFIT documentation
+          <a href="." class="icon icon-home"> Analysis BENEFIT
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -43,24 +43,31 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#markdown-tools">Markdown tools</a>
+    <li class="toctree-l2"><a class="reference internal" href="#about">About</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#creating-documentation-with-mkdocs">Creating documentation with MkDocs</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#local-build">Local build</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deploy-pages-on-github">Deploy pages on GitHub</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#important-packages">Important packages</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#export-to-pdf">Export to pdf</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a>
     </li>
     </ul>
                 </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="demos/">Demos</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Patient</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="patient/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="create_user_pt/">Create user account</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expert</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="expert/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="create_user_exp/">Create user account</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -69,7 +76,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">BENEFIT documentation</a>
+          <a href=".">Analysis BENEFIT</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -85,66 +92,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="how-to-write-and-publish-documentation">How to write and publish documentation</h1>
-<h2 id="markdown-tools">Markdown tools</h2>
-<p>Markdown is a lighweight markup language, easier to deal with than html, and designed for the web.</p>
-<pre class="mermaid"><code>%%{init: {'theme': 'forest' } }%%
-  graph LR
-      A(Mardown \n file) --&gt; B(Markdown \n Processor)
-      B --&gt; C(HTML doc \n generation)
-      C --&gt;D(Website)</code></pre>
-<p>For creating static webpages from Markdown files:</p>
+                <h1 id="analysis-benefit-user-guide">Analysis BENEFIT user guide<a class="headerlink" href="#analysis-benefit-user-guide" title="Permanent link">&para;</a></h1>
+<div class="toc">
 <ul>
-<li><span style="color:green">MkDocs</span></li>
-<li>Jekyll</li>
-<li>Read The Docs</li>
-<li>...</li>
+<li><a href="#analysis-benefit-user-guide">Analysis BENEFIT user guide</a><ul>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-<p>The generated documentation should be version-controlled and pushed on the web using:</p>
-<ul>
-<li><span style="color:green">GitHub</span></li>
-<li>Bitbucket</li>
-<li>GitLab </li>
-<li>...</li>
+</li>
 </ul>
-<h2 id="creating-documentation-with-mkdocs">Creating documentation with MkDocs</h2>
-<h3 id="installation">Installation</h3>
-<p>To install MkDocs, run the following command from the command line:</p>
-<div class="highlight"><pre><span></span><code>pip install mkdocs
-</code></pre></div>
-<p>To create your documentation project (navigate to your repo folder first):</p>
-<div class="highlight"><pre><span></span><code>python -m mkdocs new my-documentation
-</code></pre></div>
-<p>The <code>my-documentation</code> just created should look like this:</p>
-<p><div class="highlight"><pre><span></span><code>&lt;repo&gt;\my-documentation
-                      |
-                      |- docs\index.md
-                      |- mkdocs.yml
-</code></pre></div>
-There's a single configuration file named <code>mkdocs.yml</code>, and a folder named <code>docs</code> that will contain your documentation source files.</p>
-<h3 id="local-build">Local build</h3>
-<p>To preview documentation:</p>
-<div class="highlight"><pre><span></span><code>python -m mkdocs serve
-</code></pre></div>
-<p>Preview is available at <code>http://127.0.0.1:8000/</code>.</p>
-<p>To build html documentation:</p>
-<div class="highlight"><pre><span></span><code>python -m mkdocs build
-</code></pre></div>
-<h3 id="deploy-pages-on-github">Deploy pages on GitHub</h3>
-<div class="highlight"><pre><span></span><code>python -m mkdocs gh-deploy
-</code></pre></div>
-<h3 id="important-packages">Important packages</h3>
-<ul>
-<li><a href="https://github.com/cmacmackin/markdown-include"><code>markdown-include</code></a></li>
-</ul>
-<h3 id="export-to-pdf">Export to pdf</h3>
-<p><code>wkhtmltopdf</code>(https://wkhtmltopdf.org/) is abinary file that can be used to export a webpage to pdf.</p>
-<div class="highlight"><pre><span></span><code>wkhtmltopdf [URL] [OUTPUT]
-</code></pre></div>
-<p><em>Note</em>: it is possible to implement a GitHub <strong>action</strong> that generate both the documentation webpage and the pdf file each time a commit is pushed.</p>
+</div>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p>Methods of generalized pairwise comparisons (GPC) form a recent literature that attempts at addressing a common concern for the analysis of randomized clinical trial data; while multiple outcomes of interest are typically measured on patients, traditional statistical investigation only concentrates on a ‘’primary’’ outcome. All other outcomes are then either only considered as of secondary importance, or not considered at all in the analysis.
+GPC aims at circumventing this pattern; its objective is to bridge statistical soundness with clinical relevance by:</p>
+<ol>
+<li>
+<p>Incorporating inputs of patients and clinicians into the analysis,</p>
+</li>
+<li>
+<p>Providing a statistical tool that remains appropriate for interpretation and communication of the analysis.</p>
+</li>
+</ol>
+<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h2>
+<p>Please do not hesitate to contact us:<br />
+<u><strong>BENEFIT team contact</strong></u>:<br />
+Mickaël De Backer: mickael.de.backer@iddi.com<br />
+Samuel Salvaggio: samuel.salvaggio@iddi.com<br />
+Emilie Barre: emilie.barre@iddi.com<br />
+Jean-Christophe.Chiem: Jean-Christophe.Chiem@iddi.com  </p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="demos/" class="btn btn-neutral float-right" title="Demos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -167,6 +148,8 @@ There's a single configuration file named <code>mkdocs.yml</code>, and a folder 
     
     
     
+      <span><a href="demos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
   </span>
 </div>
     <script>var base_url = '.';</script>
@@ -184,5 +167,5 @@ There's a single configuration file named <code>mkdocs.yml</code>, and a folder 
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2022-12-26 09:04:02.416553+00:00
+Build Date UTC : 2022-12-26 09:20:32.957036+00:00
 -->
