@@ -1,7 +1,21 @@
-site_name: MkLorum
-site_url: https://example.com/
+site_name: Analysis BENEFIT
 nav:
     - Home: index.md
-    - About: about.md
-    
+    - Getting Started: 
+        - demos.md
+    - Patient: 
+        - patient.md
+        - create_user.md
+    - Expert: 
+        - expert.md
+        - create_user.md
+        
+markdown_extensions:
+    - toc:
+        permalink: True    
+    - markdown_include.include:
+        base_path: docs    
 theme: readthedocs
+
+plugins: 
+    - search
