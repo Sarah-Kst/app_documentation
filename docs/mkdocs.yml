@@ -1,15 +1,21 @@
-site_name: BENEFIT documentation
+site_name: Analysis BENEFIT
 nav:
-    - Home: index.md 
-    
-theme: readthedocs
-
+    - Home: index.md
+    - Getting Started: 
+        - demos.md
+    - Patient: 
+        - patient.md
+        - create_user_pt.md
+    - Expert: 
+        - expert.md
+        - create_user_exp.md
+        
 markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+    - toc:
+        permalink: True    
+    - markdown_include.include:
+        base_path: docs    
+theme: readthedocs
 
 plugins: 
     - search
